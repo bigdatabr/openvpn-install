@@ -244,7 +244,7 @@ function installQuestions() {
 		echo "It seems this server is behind NAT. What is its public IPv4 address or hostname?"
 		echo "We need it for the clients to connect to the server."
 
-		PUBLICIP=$(curl -s https://api.ipify.org)
+		PUBLICIP=$(curl -s https://ifconfig.me)
 		until [[ $ENDPOINT != "" ]]; do
 			read -rp "Public IPv4 address or hostname: " -e -i "$PUBLICIP" ENDPOINT
 		done
